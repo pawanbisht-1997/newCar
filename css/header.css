@@ -1,0 +1,83 @@
+header{
+    width: 100%;
+    position: relative;
+}
+
+.video_section {
+    position: relative;
+    height: 100vh;
+}
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+
+}
+/* header .top-header{
+    border-bottom: 1px solid #f3f0f08a;
+    padding: 10px 0px;
+} */
+
+
+header .navigation_bar {
+    padding: 18px 0;
+    border-bottom: 1px solid #ffffff59;
+}
+header .navigation_bar .logo {
+    width: 17%;
+}
+/* header .top-header a{
+    color: #fff;
+    font-family: Poppins-light;
+    font-size: 14px;
+} */
+/* header .top-header a .fa-solid{
+    font-size: 14px;
+    margin-right: 3px;
+} */
+ .transparent {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(182deg, #000000ad, transparent);
+}
+video {
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+.video_contant {
+    position: absolute;
+    top: 30%;
+    z-index: 3;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+.mail-phone {
+    margin-right: 25px;
+}
+
+/* header .mail-phone ul li a{
+    color: #fff;
+   
+
+} */
+header .navigation_bar .menu ul li{
+    display: inline-block;
+    margin-left: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+header .navigation_bar .menu ul li a{
+    color: #e7e2e2;
+    text-transform: capitalize;
+    
+}
