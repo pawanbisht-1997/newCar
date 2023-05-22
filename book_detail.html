@@ -339,7 +339,8 @@
                       <small>(Meeting with a name sign. Enter the name you want written on the sign)</small>
                     </div>
                   </div>
-                  <input type="submit" class="glbl-btn" value="continue" id="continue">
+                  <!-- <input type="submit" class="glbl-btn" value="continue"> -->
+                  <a href="#" id="continue" class="glbl-btn">Continue</a>
                 </div>
               </form>
             </div>
@@ -489,25 +490,27 @@
     </div>
   </section>
   <script>
-    var input = document.querySelector("#phone");
-    window.intlTelInput(input, {});
-    // process slide 
-    $(document).ready(function () {
-      $("#next-slide").click(function () {
-        $(".first_slide").hide();
-        $(".second_slide").show();
-        $(".price_box").show();
-      });
-      $("#continue").click(function () {
-        $(".first_slide").hide();
-        $(".second_slide").hide();
-        $(".third_slide").show();
-        $(".price_box").show();
-      });
+    // number 
+var input = document.querySelector("#phone");
+window.intlTelInput(input, {});
 
-    });
+// process slide 
+$(document).ready(function () {
+  $("#next-slide").click(function () {
+    $(".first_slide").hide();
+    $(".second_slide").show();
+    $(".price_box").show();
+  });
+});
+$(document).ready(function () {
+  $("#continue").click(function () {
 
+    $(".third_slide").show();
+    $(".first_slide").hide();
+    $(".second_slide").hide();
+    $(".price_box").show();
+  });
+});
   </script>
 </body>
-
 </html>
