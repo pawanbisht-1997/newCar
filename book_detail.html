@@ -339,22 +339,117 @@
                       <small>(Meeting with a name sign. Enter the name you want written on the sign)</small>
                     </div>
                   </div>
-                  <input type="submit" class="glbl-btn" value="continue">
+                  <input type="submit" class="glbl-btn" value="continue" id="continue">
                 </div>
               </form>
+            </div>
+          </div>
+          <div class="third_slide">
+            <div class="process_bar">
+              <ul>
+                <li class="first_process">
+                  <span>1</span>
+                  <h5>Vehicle</h5>
+                </li>
+                <li class="second_process">
+                  <span>2</span>
+                  <h5>Details</h5>
+                </li>
+                <li class="last_step">
+                  <span>3</span>
+                  <h5>Payment</h5>
+                </li>
+              </ul>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="credit_cardbox">
+                  <h5> CREDIT CARD</h5>
+                  <div class="payment_flex flex">
+                    <img src="./img/paypal_border.svg" alt="">
+                    <img src="img/visa.svg" alt="">
+                    <img src="img/amex.svg" alt="">
+                    <img src="img/applepay.svg" alt="">
+                    <img src="img/googlepay.svg" alt="">
+                    <img src="img/maestro.svg" alt="">
+                  </div>
+                  <div class="credit-carform">
+                    <form action="">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="">Name on Card</label>
+                            <input type="text" placeholder="Cardholder's  Name">
+                            <img src="img/proflie.png" alt="">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="">Card Number</label>
+                            <input type="text" placeholder="Card Number">
+                            <img src="./img/card.png" alt="">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="">Expiry date</label>
+                            <input type="text" placeholder="MM/YY">
+                            <img src="./img/calendar.png" alt="">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="">Security code</label>
+                            <input type="text" placeholder="CVV">
+                            <img src="img/reset-password.png" alt="">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input type="submit" value="pay">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="upipayment">
+                      <img src="img/gpay.png" alt="">
+                      <button>Buy with <span>G pay</span></button>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="upipayment">
+                      <img src="img/paypal.webp" alt="">
+                      <button>Buy with <span>payPal</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="left_sticky">
+            <div class="price_box">
+              <div class="min_box">
+                <h2>Total Amount</h2>
+                <h1><span><i class="fa fa-usd" aria-hidden="true"></i></span> 265.40 </h1>
+              </div>
+            </div>
             <div class="trip_detail">
               <h4>Your transfer</h4>
               <div class="sub_tourdetail">
-                <h6><i class="fa-solid fa-car"></i> Outward journey</h6>
+                <h6><img src="img/speedometer.png" alt=""> Outward journey</h6>
                 <p class="point_a"> Rome, Metropolitan City of Rome Capital, Italy</p>
                 <p class="point_b"> Vannes, France</p>
-                <p><i class="fa-solid fa-calendar-days"></i> 24 May 2023</p>
-                <p><i class="fa-solid fa-clock"></i> 11:00 (11:00 am)</p>
+                <p><img src="img/calendar2.png" alt=""> 24 May 2023</p>
+                <p><img src="img/time.png" alt=""> 11:00 (11:00 am)</p>
               </div>
               <div class="book_return">
                 <small>Book smart! </small>
@@ -362,9 +457,9 @@
               </div>
               <div class="tour_distance">
                 <ul>
-                  <li> 2 Passengers</li>
-                  <li> 532 km/ 333 miles</li>
-                  <li> 5h 17m</li>
+                  <li><img src="img/tourist.png" alt=""> 2 Passengers</li>
+                  <li><img src="img/roadmap.png" alt=""> 532 km/ 333 miles</li>
+                  <li><img src="img/clock.png" alt=""> 5h 17m</li>
                 </ul>
               </div>
             </div>
@@ -393,16 +488,21 @@
       </div>
     </div>
   </section>
-
   <script>
     var input = document.querySelector("#phone");
     window.intlTelInput(input, {});
-
     // process slide 
     $(document).ready(function () {
       $("#next-slide").click(function () {
         $(".first_slide").hide();
         $(".second_slide").show();
+        $(".price_box").show();
+      });
+      $("#continue").click(function () {
+        $(".first_slide").hide();
+        $(".second_slide").hide();
+        $(".third_slide").show();
+        $(".price_box").show();
       });
 
     });

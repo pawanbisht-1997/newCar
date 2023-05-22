@@ -76,7 +76,6 @@ section {
     font-weight: 800;
     font-size: 36px;
 }
-
 /* innear header  */
 .inner_header {
     position: static;
@@ -334,52 +333,89 @@ section {
 }
 
 .main_slide  .car_one .right .glbl-btn {
-    width: 90%;
+    background-image: linear-gradient(to right,#f9b233 0,#ea6f0a 100%,#f9b233 100%);
+    width: 75%;
     border: unset;
-    padding: 9px;
     text-transform: uppercase;
     margin: auto;
-    display: block;
+    display: inline-block;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
-.main_slide .trip_detail {
-    background-color: #fff;
-    padding: 10px;
+.main_slide  .car_one .right .glbl-btn:focus{
+    outline: unset;
+}
+.main_slide .price_box{
+    background-image: linear-gradient(to right,#f9b233 0,#ea6f0a 100%,#f9b233 100%);
     border-radius: 10px;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08), 0px -1px 2px 0px rgba(0, 0, 0, 0.02);
+    box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
+    padding: 20px;
+    margin-bottom: 25px;
+    display: none;
+}
+.main_slide .price_box .min_box {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
+    margin-top: -50px;
+    outline: 1px solid #fe800854;
+    outline-offset: -4px;
+}
+
+.main_slide .price_box h1{
+    color: #fe8008;
+    font-size: 45px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.main_slide .price_box h1 span{
+    font-size: 30px;
+    margin-right: -6px;
+}
+.main_slide .price_box h2{
+    font-size: 22px;
+    font-weight: 600;
+    color: #626262;
+}
+.main_slide .trip_detail{
+    background-color: #fff;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
 }
 .main_slide .trip_detail h4{
+    
     font-size: 20px;
     font-family: Poppins-Medium;
     position: relative;
-    background-color: #fe8008;
-    padding: 10px 0 10px 50px;
+    background-image: linear-gradient(to right,#f9b233 0,#ea6f0a 100%,#f9b233 100%);
+    padding: 10px 0 10px 0px;
     color: #fff;
+    text-align: center;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
 
 }
 .main_slide .trip_detail h6{
-    font-family: Poppins-Medium;
-    
+    background-repeat: no-repeat;
+    font-family: Poppins-Medium;    
     margin-bottom: 25px;
     color: #535353;
-    font-size: 18px;
+    font-size: 18px;    
+    padding-top: 5px;
+}
+.main_slide .trip_detail h6 img{
+    margin-right: 5px;
 }
 .main_slide .trip_detail h6 .fa-solid{
     color: #fe8008;
 }
-.main_slide .trip_detail h4::before{
-    content: '';
-    background: url(../img/roadmap.png);
-    position:absolute;
-    width: 100%;
-    height: 50px;
-    background-repeat: no-repeat;
-    left: 12px;
-
-}
-
 .main_slide .trip_detail .sub_tourdetail{
-    padding-left: 8px;
-    padding: 10px;
+    padding: 10px 20px;
     border-bottom: 1px solid #c9bcbc;
 }
 .main_slide .trip_detail .sub_tourdetail h6 .fa-solid{
@@ -390,6 +426,9 @@ section {
     color: rgb(83, 83, 83);
     padding-bottom: 5px;
 }
+.main_slide .trip_detail .sub_tourdetail p img{
+    margin-right: 8px;
+}
 .main_slide .trip_detail .sub_tourdetail p:last-child{
     margin-bottom: 0px;
 }
@@ -398,16 +437,30 @@ section {
     font-size: 17px;
     color: #fe8008;
 }
-
+.main_slide .trip_detail .sub_tourdetail p{
+    color: rgb(104 104 104);
+    font-size: 15px;
+}
 .main_slide .trip_detail .sub_tourdetail .point_a{
     background-image: url(../img/map-marker\ .png);
     background-repeat: no-repeat;
     padding-left: 29px;
     margin-left: -5px;
     font-size: 14px;
-    color: #535353;
+    position: relative;
     padding-bottom: 5px;
 }
+.main_slide .trip_detail .sub_tourdetail .point_a::before{
+    content: "";
+    position: absolute;
+    display: block;
+    border-left: 2px dotted #ec760f;
+    top: 27px;
+    z-index: 1;
+    height: 33px;
+    left: 9px;
+}
+
 
 .main_slide .trip_detail .sub_tourdetail .point_b{
     background-image: url(../img/map-markerb.png);
@@ -415,57 +468,61 @@ section {
     padding-left: 29px;
     margin-left: -5px;
     font-size: 14px;
-    color: #535353;
+  
     padding-bottom: 5px;
 }
 
 .main_slide .trip_detail .book_return{
     text-align: center;
     padding: 20px 0px;
-    border-bottom: 1px solid #c9bcbc;
-   
+    border-bottom: 1px solid #c9bcbc;  
+}
+.main_slide .tour_distance {
+    padding: 10px 23px;
 }
 .main_slide .trip_detail .book_return small{
     display: block;
     color: #535353;
 }
 .main_slide .trip_detail .book_return .glbl-btn{
-    width: 100%;
-    padding: 8px 0;
+    width: 90%;
+    padding: 12px 0;
     display: inline-block;
     text-transform: uppercase;
+    border-radius: 4px;
+    background-image: linear-gradient(to right,#f9b233 0,#ea6f0a 100%,#f9b233 100%);
 }
 .main_slide .trip_detail .book_return .glbl-btn .fa-solid{
     padding-right: 10px;
 }
-
 .main_slide .tour_detail .tour_distance{
-
     padding-left: 13px;
 }
 .main_slide .trip_detail .tour_distance ul li{
-    font-size: 15px;
+    font-size: 14px;
     color: #535353;
     text-transform: capitalize;
-    padding-left: 35px;
-    margin-top: 14px;
+    line-height: 40px;
+}
+.main_slide .trip_detail .tour_distance ul li img{
+    margin-right: 10px;
 }
 .main_slide .trip_detail .tour_distance ul li:first-child{
- background-image: url(../img/track.png);
+
  background-repeat: no-repeat;
 }
 .main_slide .trip_detail .tour_distance ul li:nth-child(2){
-    background-image: url(../img/passenger.png);
+
     background-repeat: no-repeat;
 }
 .main_slide .trip_detail .tour_distance ul li:nth-child(3){
-    background-image: url(../img/light-years.png);
+
     background-repeat: no-repeat;
 }
 
 .main_slide  .payment_car_box {
     background-color: #fff;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08), 0px -1px 2px 0px rgba(0, 0, 0, 0.02);
+    box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
     padding: 20px 10px 20px 15px;
     border-radius: 10px;
     outline: 1px solid #fe800854;
@@ -475,8 +532,8 @@ section {
 .main_slide .payment_car_box ul li{
     background-repeat: no-repeat;
     font-size: 14px;
-    color: #535353;
-    margin-bottom: 8px;
+    color: rgb(139 139 139);
+    margin-bottom: 15px;
     position: relative;
     padding-left: 19px;
 }
@@ -501,18 +558,19 @@ section {
 }
 .main_slide .need_help {
     padding: 15px;
-    background: #fff;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08), 0px -1px 2px 0px rgba(0, 0, 0, 0.02);
+
+    box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
     border-radius: 10px;
-    outline: 1px solid #fe800854;
+    background-image: linear-gradient(to right,#f9b233 0,#ea6f0a 100%,#f9b233 100%);
     outline-offset: -5px;
+    outline: 1px solid #fff;
 }
 .main_slide .need_help h5{
-    color: #ff6e07;
+    color: #fff;
     font-family: Poppins-Medium;
 }
 .main_slide .need_help a{
-    color: #5e5e5e;
+    color: #fff;
     font-size: 20px;
 }
 
@@ -544,6 +602,13 @@ section {
     font-weight: 600;
     color: #404040;
 }
+
+
+/* second slide  */
+.second_slide{
+    display: none;
+}
+
 
 .second_slide form input:focus{
     border: 1px solid #fe8008;
@@ -607,6 +672,10 @@ section {
     transition: all 0.5s ease-in-out;
 }
 
+.second_slide .form_group select:focus{
+    border: 1px solid #fe8008;
+}
+
 
 .second_slide .form_group .iti {
     position: relative;
@@ -633,19 +702,19 @@ section {
 .process_bar ul li{
     position: relative;
     display: inline-block;
-    margin-right: 170px;
+    margin-right: 180px;
 }
 .process_bar span{
     display: inline-block;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     background-color: #fff;
     border-radius: 100%;
     color: #c9c9c9;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 24px;
     border: 3px solid #c9c9c9;
     box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08), 0px -1px 2px 0px rgba(0, 0, 0, 0.02);
 }
@@ -653,11 +722,11 @@ section {
 .process_bar  ul li:after {
     content: "";
     position: absolute;
-    width: 220px;
+    width: 165px;
     height: 3px;
     background-color: #dcdcdc;
-    top: 30px;
-    left: 43px;
+    top: 25px;
+    left: 65px;
     z-index: -1;
     box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08), 0px -1px 2px 0px rgba(0, 0, 0, 0.02);
 
@@ -665,7 +734,7 @@ section {
 .process_bar  ul li h5{
     font-family: Poppins-Medium;
     color: #838383;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 10px;
 }
 .process_bar ul .last_step:after{
@@ -674,17 +743,125 @@ section {
 
 
 /* second slide process bar  */
-.second_slide .process_bar .first_process span{
+ .process_bar .first_process span{
     background-color: #fe8008;
     border: 3px solid #fe8008;
     color: #ffff;
 }
-.second_slide .process_bar .first_process::after{
+ .process_bar .first_process::after{
     background-color: #fe8008;
 } 
-.second_slide .process_bar .first_process h5{
+ .process_bar .first_process h5{
  color: #fe8008;
 }
-.second_slide{
+.second_process  span{
+    background-color: #fe8008;
+    border: 3px solid #fe8008;
+    color: #ffff;
+}
+.process_bar .second_process::after{
+    background-color: #fe8008;
+} 
+ .process_bar .second_process h5{
+ color: #fe8008;
+}
+
+
+
+/* third slide  */
+.third_slide{
     display: none;
 }
+
+.third_slide .credit_cardbox {
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08), 0px -1px 2px 0px rgba(0, 0, 0, 0.02);
+}
+
+.third_slide .credit_cardbox h5 {
+ font-weight: 900;
+    color: #13395e;
+    padding-left: 45px;
+}
+.third_slide .credit_cardbox h5:before{
+    content: "";
+    background-image: url(../img/credit-card.png);
+    height: 70px;
+    position: absolute;
+    width: 100px;
+    background-repeat: no-repeat;
+    left: 40px;
+}
+.third_slide .credit_cardbox .payment_flex{
+ width: 50px;
+ margin: 25px 0;
+}
+
+.credit-carform form .form-group label{
+    color: #13395e;
+    margin-bottom: 0px;
+    font-size: 17px;
+    font-family: Poppins-Medium;
+}
+.credit-carform form .form-group input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    outline: none;
+    padding-left: 40px;
+    transition: all 0.5s ease-in-out;
+}
+.credit-carform form .form-group input:focus{
+    border: 1px solid #fe8008;
+}
+.credit-carform form .form-group{
+    position: relative;
+}
+.credit-carform form .form-group img{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+}
+.credit-carform form input[type="submit"] {
+    margin: auto;
+    display: block;
+    background-image: linear-gradient(to right,#f9b233 0,#ea6f0a 100%,#f9b233 100%);
+    border: unset;
+    color: #fff;
+    height: 48px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.upipayment{
+    background-color: #fff;
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08), 0px -1px 2px 0px rgba(0, 0, 0, 0.02);
+    margin: 35px 0;
+    padding: 25px;
+    border-radius: 6px;
+}
+.upipayment img{
+    width: 100px;
+}
+
+.upipayment button{
+    color: #FFF;
+    background-image: linear-gradient(to right,#f9b233 0,#ea6f0a 100%,#f9b233 100%);
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 20px;
+    border: unset;
+    outline: unset;
+}
+.upipayment button:hover{
+    background-color: #ff9415;
+    border: 1px solid #ff9d1b;
+}
+
