@@ -614,7 +614,9 @@ section {
     border: 1px solid #fe8008;
 }
 
-.second_slide form input[type="submit"]{
+.second_slide form #continue{
+    background-image: linear-gradient(to right,#f9b233 0,#ea6f0a 100%,#f9b233 100%);
+
     margin-top: 35px;
     width: 28%;
     border: unset;
@@ -624,8 +626,15 @@ section {
     margin-left: 20px;
     font-weight: 600;
     letter-spacing: 1px;
-    height: 50px;
+
     border-radius: 5px;
+    
+    padding: 14px;
+    text-align: center;
+}
+.second_slide form #continue:hover{
+    text-decoration: underline;
+    color:#fff;
 }
 .second_slide .form_group small{
     font-size: 17px;
